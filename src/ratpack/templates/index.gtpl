@@ -21,6 +21,11 @@ html {
       p 'This is the main page for your Ratpack app.'
     }
 
+    section {
+      h3 "This is application instance index ${appIndex}"
+      p 'Refresh the page to see which app instance you get next!'
+    }
+
     footer {}
   }
 }
