@@ -1,9 +1,9 @@
-lattice-ratpack
+[lattice-ratpack](https://hub.docker.com/r/stevegood/lattice-ratpack/)
 ===============
 
 This is a sample project to demonstrate running a ratpack application on lattice-cf.
 
-Running lattice-ratpack
+Running [lattice-ratpack](https://hub.docker.com/r/stevegood/lattice-ratpack/)
 -----------------------
 
     LATTICE_CLI_TIMEOUT=300 ltc create lattice-ratpack stevegood/lattice-ratpack --memory-mb 0
