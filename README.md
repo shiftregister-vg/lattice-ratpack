@@ -1,48 +1,11 @@
-Ratpack project template
------------------------------
+lattice-ratpack
+===============
 
-You have just created a basic Groovy Ratpack application. It doesn't do much
-at this point, but we have set you up with a standard project structure, a 
-Guice back Registry, simple home page, and Spock for writing tests (because 
-you'd be mad not to use it).
+This is a sample project to demonstrate running a ratpack application on lattice-cf.
 
-In this project you get:
+Running lattice-ratpack
+-----------------------
 
-* A Gradle build file with pre-built Gradle wrapper
-* A tiny home page at src/ratpack/templates/index.html (it's a template)
-* A routing file at src/ratpack/Ratpack.groovy
-* Reloading enabled in build.gradle
-* A standard project structure:
+    LATTICE_CLI_TIMEOUT=300 ltc create lattice-ratpack stevegood/lattice-ratpack --memory-mb 0
 
-    <proj>
-      |
-      +- src
-          |
-          +- ratpack
-          |     |
-          |     +- Ratpack.groovy
-          |     +- ratpack.properties
-          |     +- public // Static assets in here
-          |          |
-          |          +- images
-          |          +- lib
-          |          +- scripts
-          |          +- styles
-          |
-          +- main
-          |   |
-          |   +- groovy
-                   |
-                   +- // App classes in here!
-          |
-          +- test
-              |
-              +- groovy
-                   |
-                   +- // Spock tests in here!
-
-That's it! You can start the basic app with
-
-    ./gradlew run
-
-but it's up to you to add the bells, whistles, and meat of the application.
+For some reason, initial startup seems to take a while, hence the long timeout for lattice.  Also, removing the memory limit will stop the application from crashing. A better practice would be to determine the actual memory required for the app and use that instead of 0.

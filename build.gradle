@@ -30,7 +30,7 @@ dependencies {
 task buildDocker(type: Docker) {
     dependsOn shadowJar
     applicationName = 'lattice-ratpack'
-    tagVersion = '1.0.1'
+    tagVersion = '1.0.3'
     dockerfile = project.file('Dockerfile')
 
     doFirst {
