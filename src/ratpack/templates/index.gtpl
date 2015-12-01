@@ -9,23 +9,12 @@ html {
     meta(name: 'viewport', content: 'width=device-width, initial-scale=1')
 
     link(href: '/images/favicon.ico', rel: 'shortcut icon')
+    link(href: '/styles/main.css', rel: 'stylesheet')
   }
-  body {
-    header {
-      h1 'Ratpack'
-      p 'Simple, lean &amp; powerful HTTP apps'
-    }
-
-    section {
-      h2 title
-      p 'This is the main page for your Ratpack app.'
-    }
-
-    section {
-      h3 "This is application instance index ${appIndex}"
-      p 'Refresh the page to see which app instance you get next!'
-    }
-
-    footer {}
+  body(class: '') {
+    div(class: 'my-index', 'My Index Is')
+    div(class: 'index', "${appIndex}")
+    div(class: 'mid-color', "Uptime: ${uptime}s")
+    div(class: 'bottom-color', '')
   }
 }
